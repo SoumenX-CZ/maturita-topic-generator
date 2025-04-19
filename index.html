@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generátor Náhodných Témat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-dark-gradient">
+    <div
+      class="container d-flex flex-column align-items-center justify-content-center min-vh-100"
+    >
+      <div class="glass-card p-5 text-center">
+        <h1 class="display-4 fw-bold text-white mb-4">🎓 Generátor Témat</h1>
+        <p class="text-white-50 fs-5 mb-5">
+          Vyberte předmět a vygenerujte si náhodné téma.
+        </p>
+        <div class="row g-5">
+          <div class="col-12 col-md-6">
+            <button
+              id="mathButton"
+              class="btn btn-lg btn-outline-light w-100 py-3"
+            >
+              📘 Matematika
+            </button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button
+              id="czechButton"
+              class="btn btn-lg btn-outline-light w-100 py-3"
+            >
+              📖 Čeština
+            </button>
+          </div>
+        </div>
+        <div
+          class="alert alert-info text-center mt-4 d-none"
+          id="topicContainer"
+        >
+          <h4 id="topic" class="mb-0"></h4>
+        </div>
+        <div
+          class="timer-controls mt-4 d-flex justify-content-center gap-5"
+          style="padding-right: 9rem; padding-left: 9rem"
+        >
+          <button id="startButton" class="btn glass-button">Start</button>
+          <button id="pauseButton" class="btn glass-button">Pauza</button>
+          <button id="stopButton" class="btn glass-button">Zastavit</button>
+        </div>
+        <div id="timerContainer" class="mt-4 text-white fs-5"></div>
+      </div>
+      <footer class="mt-4 text-center text-white-50">
+        <small>© 2025 Generátor Témat | Vytvořeno s ❤️</small>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

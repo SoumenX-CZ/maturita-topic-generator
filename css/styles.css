@@ -1,0 +1,171 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pozadí s Glassmorphism efektem */
+body.bg-glass {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://source.unsplash.com/1920x1080/?abstract,gradient");
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tmavé pozadí s přechodem */
+body.bg-dark-gradient {
+  background: linear-gradient(135deg, #0d1117, #1e3a8a);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Pro absolutní pozicování koule */
+  overflow: hidden; /* Skryje přesahující koule */
+}
+
+/* Koule na pozadí */
+body.bg-dark-gradient::before,
+body.bg-dark-gradient::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+body.bg-dark-gradient::before {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  top: -100px;
+  left: -100px;
+}
+
+body.bg-dark-gradient::after {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  bottom: -150px;
+  right: -150px;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  background-color: none;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #343a40;
+}
+
+button {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.topic {
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Karta s Glassmorphism efektem */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  color: #fff;
+  position: relative; /* Zajišťuje, že koule zůstanou na pozadí */
+  z-index: 1; /* Karta bude nad koulemi */
+}
+
+.card-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Tlačítka */
+.btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Tlačítka s Glassmorphism efektem */
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: #fff;
+  padding: 0.8rem 0.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.glass-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.glass-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Výstup tématu */
+.alert {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 2rem;
+  text-align: center;
+}
