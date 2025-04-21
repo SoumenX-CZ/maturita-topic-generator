@@ -45,6 +45,8 @@ random-topic-generator
 3. Použijte ovládací tlačítka časovače pro správu 15minutového časovače.
 4. Po vypršení času se přehraje zvukové upozornění.
 
+Live verze: https://maturita-topic-generator.netlify.app/
+
 ## Požadavky
 
 - Moderní webový prohlížeč podporující HTML5 a JavaScript.
